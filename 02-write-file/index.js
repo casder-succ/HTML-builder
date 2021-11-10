@@ -9,7 +9,7 @@ const writeStream = fs.createWriteStream(path.join(__dirname, 'text.txt'));
 console.log('Enter your big data: ');
 
 process.stdin.on('data', function (data) {
-  const dataStr = data.toString().split('\n')[0];
+  const dataStr = data.toString().trim();
 
   if (dataStr === 'exit') {
     process.exit();
