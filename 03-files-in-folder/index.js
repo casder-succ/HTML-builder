@@ -16,7 +16,7 @@ try {
           }
 
           if (stats.isFile()) {
-            const name = path.basename(filePath);
+            const name = path.basename(filePath, path.extname(filePath));
             const ext = path.extname(filePath).slice(1);
             const size = stats.size;
 
